@@ -6,3 +6,4 @@ Based on Maximilian Schwarzmüller's lectures; adapted to Visual Studio 2017 wit
 - Double-way binding
 - Event listening
 - Creating structural directives
+- ngSwitch
