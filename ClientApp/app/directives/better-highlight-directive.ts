@@ -14,9 +14,10 @@
 export class BetterHighlightDirective implements OnInit {
     @Input() defaultColor = 'transparent';
     @Input('appBetterHighlight') highLightColor = 'blue';
-    //On the element, on which this directive sits, access the "style" property
+    //On the element, on which this directive sits, double-bind the "style" property
     @HostBinding('style.backgroundColor') backgroundColor: string; 
 
+    //renderer es para manipular el DOM de forma generica, se instancia la variable privada de esta clase
     constructor(private elRef: ElementRef, private renderer: Renderer2) {
 
     }
