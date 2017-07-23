@@ -14,7 +14,8 @@
                         {{odd}}
                     </li>
                 </div>
-                <div *ngIf="!onlyOdd">
+                <!--app unless is a custom structural directive (you can tell by the *) that does the opposite of ngIf-->
+                <div *appUnless="onlyOdd">
                     <li class="list-group-item"
                         [ngClass]="{oddstyle: even % 2 !== 0}"
                         [ngStyle]="{backgroundColor: even % 2 !== 0? 'yellow' : 'transparent'}"
@@ -22,6 +23,14 @@
                         {{even}}
                     </li>
                 </div>
+                <!--<div *ngIf="!onlyOdd">
+                    <li class="list-group-item"
+                        [ngClass]="{oddstyle: even % 2 !== 0}"
+                        [ngStyle]="{backgroundColor: even % 2 !== 0? 'yellow' : 'transparent'}"
+                        *ngFor="let even of evenNumbers">
+                        {{even}}
+                    </li>
+                </div>-->
 <!--                This is what *ngIf does behind the scenes with the element on which we place it, in this case with the div:-->
                 <!--<ng-template [ngIf]="!onlyOdd">
                     <div>
